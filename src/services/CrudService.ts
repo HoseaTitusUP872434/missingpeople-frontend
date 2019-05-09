@@ -8,6 +8,7 @@ import { ToastController, Toast } from 'ionic-angular';
 export class CrudService {
   SERVICE_URL;
   REST_API_URL;
+  IMAGE_PATH ;
   URLL;
   naira = '&#8358;';
   emp_msg = {};
@@ -55,8 +56,9 @@ export class CrudService {
 
   constructor(private http: HttpClient,public toastController: ToastController) {
  
-    this.REST_API_URL = 'http://40.86.95.117:8084/api/';
-   // this.REST_API_URL = 'http://localhost:8084/api/';
+   //////////////// this.REST_API_URL = 'http://40.86.95.117:8084/api/';
+    this.REST_API_URL = 'http://localhost:8084/api/';
+    
     this.emp_msg = { message: 'No data available' };
   }
 

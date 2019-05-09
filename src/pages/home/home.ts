@@ -26,6 +26,7 @@ import { ActivityService } from "../../services/activity-service";
 export class HomePage {
   // search condition
   loading=true;
+  IMAGEPATH ;
   public reportPage = ReportPersonPage;
   reports;
   public search = {
@@ -37,6 +38,11 @@ export class HomePage {
     private crudService: CrudService,  public sanitizer: DomSanitizer,
      public event :Events, private act: ActivityService) {
      //  this.sanitizer.bypassSecurityTrustResourceUrl
+     this.IMAGEPATH = this.crudService.REST_API_URL+"files/";
+  }
+
+  getImage(name){
+    return this.IMAGEPATH+name;
   }
 
   sanitize(img){
