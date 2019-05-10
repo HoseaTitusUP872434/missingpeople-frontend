@@ -26,7 +26,7 @@
 
         <ion-item>
           <ion-avatar item-start>
-          <img [src]="report.userImage"  onerror="this.src='assets/img/avatar.png'"> 
+          <img [src]="sanitize(report.userImage)"  onerror="this.src='assets/img/avatar.png'"> 
            
           </ion-avatar>
           {{report.caption}}
@@ -35,7 +35,7 @@
         </ion-item>
       
         <!-- <img [src]="sanitize(report.postImage)" onerror="this.src='assets/img/avatar.png'">  -->
-        <img src="{{report.postImage}}" onerror="this.src='assets/img/avatar.png'"> 
+        <img [src]="sanitize(report.postImage)" onerror="this.src='assets/img/avatar.png'"> 
 
         
       

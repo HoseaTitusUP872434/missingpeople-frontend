@@ -45,9 +45,12 @@ export class HomePage {
     return this.IMAGEPATH+name;
   }
 
+  // sanitize(img){
+  //  return this.sanitizer.bypassSecurityTrustUrl('data:image/png;base64,'+img);
+  // }
   sanitize(img){
-   return this.sanitizer.bypassSecurityTrustUrl('data:image/png;base64,'+img);
-  }
+    //return this.sanitizer.(img);
+   }
 
   ionViewWillEnter() {
     
